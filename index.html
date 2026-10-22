@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Creative Studio ✨</h1>
+        <p>Turn your ideas into something beautiful.</p>
+    </header>
+
+    <main>
+        <h2>Let's Create Something!</h2>
+
+        <input type="text" id="idea" placeholder="Write your idea here...">
+
+        <button onclick="showIdea()">Generate Idea</button>
+
+        <p id="result"></p>
+    </main>
+
+    <script>
+        function showIdea() {
+            let idea = document.getElementById("idea").value;
+
+            if (idea.trim() === "") {
+                document.getElementById("result").innerText =
+                    "Please write an idea first!";
+            } else {
+                document.getElementById("result").innerText =
+                    "Your idea: " + idea;
+            }
+        }
+    </script>
+
+</body>
+</html>
